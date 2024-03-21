@@ -1,0 +1,14 @@
+# /etc/systemd/system/dc-launcher.service
+[Unit]
+Description=DC Launcher
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3.6 /usr/lib/dc-launcher/dock
+Restart=always
+# User=ElementaryOS
+
+[Install]
+WantedBy=multi-user.target
+
+			
