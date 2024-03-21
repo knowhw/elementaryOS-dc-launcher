@@ -6,7 +6,7 @@ Description=DC Launcher
 Type=simple
 ExecStart=/usr/bin/python3.6 /usr/lib/dc-launcher/dock
 Restart=always
-# User=ElementaryOS
+User=linux
 
 [Install]
 WantedBy=multi-user.target
