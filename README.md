@@ -1,4 +1,4 @@
-## elementaryOS-dc-launcher
+## elementaryOS-dc-launcher-service
 testing...
 
 
