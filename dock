@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 import time
-from listdir import applications
-from listdir import ardiff
+# from listdir import applications
+# from listdir import ardiff
+appdir='/usr/share/applications'
 
 from launcher import dock 
 
@@ -13,7 +14,56 @@ from shortcuts import Content
 
 #test.add("telegramdesktop")
 # if "telegramdesktop" in test.ls.dockitems:
+def applications():
 
+	import os
+	
+	
+	# global path_desktop_items
+	path_desktop_items = [ os.path.realpath(item) 
+	for item in os.listdir(appdir) ]
+
+
+	dictionary = {}
+	""" dictionary: app list => usr share applications """
+	
+	
+	for item in path_desktop_items:
+		
+		
+		name, extension = os.path.splitext(os.path.basename(item))
+		if ".desktop" != extension:
+			continue
+		
+		dictionary [name] = '%s/%s%s' % (appdir, name, extension)
+		""" 'path':'%s/%s%s' % (appdir, exec, extension) """
+		
+	
+	return dictionary
+
+
+class ardiff:
+	
+	before={}
+	
+	def __init__(self, before, watch=''):
+		ardiff.before = before
+		# before
+		self.watch= watch
+
+	
+		# before = applications()
+		# installed = ardiff(before, watch="installed").tolist
+	
+	@property
+	def tolist(self) :
+		if self.watch == 'installed':
+			time.sleep(1.5)
+	
+
+			if len(applications()) > len(ardiff.before):
+				for item in [  item for item in applications() if not item in ardiff.before   ]:
+					yield item
 
 test = dock()
 # test.remove_from_dock("telegramdesktop")
