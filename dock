@@ -4,6 +4,7 @@ import time
 # from listdir import ardiff
 appdir='/usr/share/applications'
 
+
 from launcher import dock 
 
 # import bamf
