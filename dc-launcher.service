@@ -4,7 +4,7 @@ Description=DC Launcher
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/python3.6 /usr/lib/dc-launcher/dock
+ExecStart=/usr/bin/python3.6 /usr/lib/dc-launcher/auto-shortc
 Restart=always
 User=linux
 
