@@ -1,6 +1,6 @@
 # /etc/systemd/system/dc-launcher.service
 [Unit]
-Description=DC Launcher
+Description=Auto Desktop Shortcut
 
 [Service]
 Type=simple
