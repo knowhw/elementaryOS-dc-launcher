@@ -1,6 +1,6 @@
 # /etc/systemd/system/dc-launcher.service
 [Unit]
-Description=Auto Desktop Shortcut
+Description=Auto Add Desktop Shortcut in Dock
 
 [Service]
 Type=simple
