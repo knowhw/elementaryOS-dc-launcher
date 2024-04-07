@@ -3,7 +3,8 @@
 import temp
 
 from launcher import glob
-from listdir import applications
+from ld import applications
+
 import os
 import time
 
