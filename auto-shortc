@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 import time
-from ld import applications
 # from ld import ardiff
+from ld import applications
 
 appdir='/usr/share/applications'
 
 from launcher import dock 
 
-# import bamf
+
+
 import os
 # import asyncio
 # sortcuts=[]
