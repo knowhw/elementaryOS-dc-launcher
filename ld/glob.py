@@ -1,0 +1,1 @@
+appdir='/usr/share/applications'
