@@ -60,11 +60,8 @@ while 1:
 			if not item in before:
 				items_list.append(item)
 
-
 	for item in items_list:
 		if item in before:
-			
-			
 			
 			time.sleep(5)
 			if test.add_toDock(item):
