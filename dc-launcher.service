@@ -1,14 +1,12 @@
 # /etc/systemd/system/dc-launcher.service
 [Unit]
-Description=Service of Add Desktop Shortcut to Dock
+Description=Service of Desktop Shortcut to Dock
+
+[Install]
+WantedBy=multi-user.target
 
 [Service]
 Type=simple
 ExecStart=/usr/bin/python3.6 /usr/lib/dc-launcher/auto-shortc
 Restart=always
 User=linux
-
-[Install]
-WantedBy=multi-user.target
-
-			
