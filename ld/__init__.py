@@ -1,22 +1,15 @@
 
 from ld import glob
 
-
 def applications():
-
+	
 	import os
-	
-	
-	# global path_desktop_items
-	path_desktop_items = [ os.path.realpath(item) 
-	for item in os.listdir(glob.appdir) ]
-
 
 	dictionary = {}
-	""" dictionary: app list => usr share applications """
+	""" dictionary: app list => usr/share/applications """
 	
 	
-	for item in path_desktop_items:
+	for item in [ os.path.realpath(item) for item in os.listdir(glob.appdir) ]:
 		
 		
 		name, extension = os.path.splitext(os.path.basename(item))
