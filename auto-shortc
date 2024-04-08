@@ -42,15 +42,14 @@ class ardiff:
 				for item in [  item for item in applications() if not item in ardiff.before   ]:
 					yield item
 
-test = dock()
-# test.remove_from_dock("telegramdesktop")
+launcher = dock()
+# launcher.remove_from_dock("telegramdesktop")
 items_list=[]
 
 while 1:
 	
 	before = applications()
-	# time.sleep(1)
-	# print("----", shortc)
+
 	for item in ardiff(before, watch="installed").tolist:
 		
 		check = Content(item)
@@ -64,7 +63,7 @@ while 1:
 		if item in before:
 			
 			time.sleep(5)
-			if test.add_toDock(item):
+			if launcher.add_toDock(item):
 				items_list.remove(item)
 				
 			time.sleep(1)
