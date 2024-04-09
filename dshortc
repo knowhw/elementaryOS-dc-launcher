@@ -1,0 +1,75 @@
+#!/usr/bin/python3
+import time
+from ld import applications
+# from ld import ardiff
+
+appdir='/usr/share/applications'
+
+from launcher import dock 
+
+# import bamf
+import os
+# import asyncio
+# sortcuts=[]
+from shortcuts import Content
+
+#test.add("telegramdesktop")
+# if "telegramdesktop" in test.ls.dockitems:
+
+
+
+class ardiff:
+	
+	before={}
+	
+	def __init__(self, before, watch=''):
+		ardiff.before = before
+		# before
+		self.watch= watch
+
+	
+		# before = applications()
+		# installed = ardiff(before, watch="installed").tolist
+	
+	@property
+	def tolist(self) :
+		if self.watch == 'installed':
+			time.sleep(1.5)
+	
+
+			if len(applications()) > len(ardiff.before):
+				for item in [  item for item in applications() if not item in ardiff.before   ]:
+					yield item
+
+test = dock()
+# test.remove_from_dock("telegramdesktop")
+items_list=[]
+
+while 1:
+	
+	before = applications()
+	# time.sleep(1)
+	# print("----", shortc)
+	for item in ardiff(before, watch="installed").tolist:
+		
+		check = Content(item)
+		if check.getitem("Type") == "Application":
+		
+			
+			
+			if not item in before:
+				items_list.append(item)
+
+
+	for item in items_list:
+		if item in before:
+			
+			
+			
+			time.sleep(2.5)
+			if test.add_toDock(item):
+				items_list.remove(item)
+				
+			time.sleep(1)
+
+			

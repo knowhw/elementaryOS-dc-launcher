@@ -1,0 +1,9 @@
+#!/bin/bash
+zenity --question --ellipsize --text "'Uygulama kisayolu rihtima eklensin mi'" \
+       --icon-name geany
+case $? in
+    0)thunar $1
+    ;;
+    1)gedit $1
+    ;;
+esac 
