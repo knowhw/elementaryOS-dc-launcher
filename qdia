@@ -1,5 +1,5 @@
 #!/bin/bash
-zenity --question --ellipsize --text "'Uygulama kisayolu rihtima eklensin mi'" \
+zenity --question --ellipsize --text "'Do you want the shortcut to be added to the launcher?'" \
        --icon-name plank
 case $? in
     0)NO $1
